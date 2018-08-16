@@ -14,6 +14,9 @@ int main(int argc, const char * argv[]) {
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
 
+        // TODO: TODO: Send the message addObject: to the NSMutableArray pointed to
+        //      by the variable items, passing a string each time
+
         // Destroy the array pointed to by items
         items = nil;
     }
