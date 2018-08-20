@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRItem.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -32,6 +33,16 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", [items objectAtIndex:i]);
 
         }
+
+        BNRItem *p = [[BNRItem alloc] init];
+
+        // This creates a new NSString, "Red Sofa" and gives it to the BNRItem
+        [p setItemName:@"Red Sofa"];
+
+        [p setSerialNumber:@"A1B2C"];
+        [p setValueInDollars:100];
+
+        NSLog(@"%@ %@ %@ %d", [p itemName], [p dateCreated], [p serialNumber], [p valueInDollars]);
 
         // Destroy the array pointed to by items
         items = nil;
