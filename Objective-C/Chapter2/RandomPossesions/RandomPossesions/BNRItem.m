@@ -21,6 +21,13 @@
     return descriptionString;
 }
 
+- (id)init
+{
+    return [self initWithItemName:@"Item"
+                   valueInDollars:0
+                     serialNumber:@""];
+}
+
 - (id)initWithItemName:(NSString *)name valueInDollars:(int)value serialNumber:(NSString *)sNumber
 {
     // Call the superclass's designated initializer
