@@ -15,6 +15,11 @@
     int valueInDollars;
     NSDate *dateCreated;
 }
+
+- (id)initWithItemName:(NSString *)name
+        valueInDollars:(int)value
+          serialNumber:(NSString *)sNumber;
+
 - (void)setItemName:(NSString *)str;
 - (NSString *)itemName;
 
@@ -25,4 +30,6 @@
 - (int)valueInDollars;
 
 - (NSDate *)dateCreated;
+
+
 @end
