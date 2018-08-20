@@ -16,10 +16,15 @@
     NSDate *dateCreated;
 }
 
+// CLASS Methods come first
++ (id)randomItem;
+
+// followed by INITIALIZERS
 - (id)initWithItemName:(NSString *)name
         valueInDollars:(int)value
           serialNumber:(NSString *)sNumber;
 
+// then any OTHER METHODS
 - (void)setItemName:(NSString *)str;
 - (NSString *)itemName;
 
