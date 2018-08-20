@@ -10,6 +10,17 @@
 
 @implementation BNRItem
 
+- (NSString *)description
+{
+    NSString *descriptionString =
+        [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@",
+                             itemName,
+                             serialNumber,
+                             valueInDollars,
+                             dateCreated];
+    return descriptionString;
+}
+
 - (void)setItemName:(NSString *)str
 {
     itemName = str;

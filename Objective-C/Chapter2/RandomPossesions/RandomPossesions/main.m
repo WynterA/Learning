@@ -42,7 +42,9 @@ int main(int argc, const char * argv[]) {
         [p setSerialNumber:@"A1B2C"];
         [p setValueInDollars:100];
 
-        NSLog(@"%@ %@ %@ %d", [p itemName], [p dateCreated], [p serialNumber], [p valueInDollars]);
+        // Remember an NSLog with %@ as the token will print the
+        //  description of the corresponding argument
+        NSLog(@"%@", p);
 
         // Destroy the array pointed to by items
         items = nil;
