@@ -19,7 +19,10 @@ int main(int argc, const char * argv[]) {
             BNRItem *p = [BNRItem randomItem];
             [items addObject:p];
         }
-        
+      
+//        // Exception example
+//        id lastObject = [items lastObject];
+//        [lastObject count];
         
         for (BNRItem *item in items) {
             NSLog(@"%@", item);
