@@ -15,10 +15,13 @@ int main(int argc, const char * argv[]) {
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             BNRItem *p = [BNRItem randomItem];
             [items addObject:p];
         }
+
+        BNRItem *a = [[BNRItem alloc] initWithItemName:@"NONE" serialNumber:@"FDASFEW23423423"];
+        [items addObject:a];
       
 //        // Exception example
 //        id lastObject = [items lastObject];

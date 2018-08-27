@@ -85,6 +85,19 @@
     return self;
 }
 
+- (id)initWithItemName:(NSString *)name serialNumber:(NSString *)sNumber
+{
+    self = [super init];
+
+    if(self) {
+        [self setItemName:name];
+        [self setSerialNumber:sNumber];
+        dateCreated = [[NSDate alloc] init];
+    }
+
+    return self;
+}
+
 - (void)setItemName:(NSString *)str
 {
     itemName = str;
