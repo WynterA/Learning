@@ -5,5 +5,7 @@
 - Challenges
 	1) Silver: Another initializer
 	2) Gold: Subclass BNRContainer
+#### III. RandomPossesions in Chapter 3
+- This is only on `develop-Chapter3` branch
 
 
