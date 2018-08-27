@@ -4,5 +4,6 @@
 #### II. RandomPossesions in Chapter 2
 - Challenges
 	1) Silver: Another initializer
+	2) Gold: Subclass BNRContainer
 
 
