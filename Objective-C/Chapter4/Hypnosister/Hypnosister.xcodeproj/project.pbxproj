@@ -10,6 +10,7 @@
 		B51925512135C06F002437BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51925502135C06F002437BA /* AppDelegate.m */; };
 		B51925532135C071002437BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51925522135C071002437BA /* Assets.xcassets */; };
 		B51925592135C071002437BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51925582135C071002437BA /* main.m */; };
+		B51925602135DB08002437BA /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = B519255F2135DB08002437BA /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		B51925522135C071002437BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B51925572135C071002437BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B51925582135C071002437BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B519255F2135DB08002437BA /* HypnosisView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		B51925612135DB5A002437BA /* HypnosisView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 				B51925522135C071002437BA /* Assets.xcassets */,
 				B51925572135C071002437BA /* Info.plist */,
 				B51925582135C071002437BA /* main.m */,
+				B519255F2135DB08002437BA /* HypnosisView.m */,
+				B51925612135DB5A002437BA /* HypnosisView.h */,
 			);
 			path = Hypnosister;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			files = (
 				B51925592135C071002437BA /* main.m in Sources */,
 				B51925512135C06F002437BA /* AppDelegate.m in Sources */,
+				B51925602135DB08002437BA /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
