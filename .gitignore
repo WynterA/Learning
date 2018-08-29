@@ -28,6 +28,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
@@ -40,6 +41,7 @@ playground.xcworkspace
 # Package.resolved
 .build/
 
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -47,9 +49,11 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 # Pods/
+
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
+
 
 # Carthage
 #
