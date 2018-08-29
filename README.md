@@ -7,10 +7,9 @@
  - Chapter 3: RandomPossesions
  - Chapter 4: Hypnosister
  
- 
 
 ### Swift BNR Book Projects
 
- - None
+ - Chapter 1: Quiz 
 	
 
