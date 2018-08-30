@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-2D-NfH">
-                                <rect key="frame" x="132" y="28" width="111" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8S-kN-f8A">
                                 <rect key="frame" x="130" y="171" width="114" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -48,18 +42,27 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSg-VB-CiF">
+                                <rect key="frame" x="62.5" y="28" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="gRO-qA-WO9"/>
+                                </constraints>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="26s-ww-8gq" firstAttribute="top" secondItem="G8S-kN-f8A" secondAttribute="bottom" constant="8" id="ATc-HT-tqj"/>
-                            <constraint firstItem="gdi-2D-NfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mwf-bb-u5z"/>
+                            <constraint firstItem="vkA-ci-U7P" firstAttribute="centerX" secondItem="jSg-VB-CiF" secondAttribute="centerX" id="CMc-UE-Z1J"/>
+                            <constraint firstItem="vkA-ci-U7P" firstAttribute="top" secondItem="jSg-VB-CiF" secondAttribute="bottom" constant="8" id="Hsp-Pm-h2e"/>
                             <constraint firstItem="G8S-kN-f8A" firstAttribute="top" secondItem="vkA-ci-U7P" secondAttribute="bottom" constant="8" id="Nyd-r7-bSk"/>
                             <constraint firstItem="G8S-kN-f8A" firstAttribute="centerX" secondItem="vkA-ci-U7P" secondAttribute="centerX" id="Oh8-qb-vNW"/>
-                            <constraint firstItem="gdi-2D-NfH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="gGV-fa-2tI"/>
-                            <constraint firstItem="vkA-ci-U7P" firstAttribute="top" secondItem="gdi-2D-NfH" secondAttribute="bottom" constant="8" id="hCH-et-nRW"/>
+                            <constraint firstItem="jSg-VB-CiF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geX-vh-dvd"/>
                             <constraint firstItem="26s-ww-8gq" firstAttribute="centerX" secondItem="vkA-ci-U7P" secondAttribute="centerX" id="m4G-ld-uNJ"/>
                             <constraint firstItem="PIQ-Ia-qbr" firstAttribute="centerX" secondItem="vkA-ci-U7P" secondAttribute="centerX" id="sIE-3o-iOW"/>
-                            <constraint firstItem="gdi-2D-NfH" firstAttribute="centerX" secondItem="vkA-ci-U7P" secondAttribute="centerX" id="tWk-tt-oI6"/>
+                            <constraint firstItem="jSg-VB-CiF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="urw-GB-6Tq"/>
                             <constraint firstItem="PIQ-Ia-qbr" firstAttribute="top" secondItem="26s-ww-8gq" secondAttribute="bottom" constant="8" id="w0Q-Bh-XaX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
