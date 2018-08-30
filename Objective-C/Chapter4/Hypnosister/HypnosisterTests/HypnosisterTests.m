@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BNRHypnosisView.h"
 
 @interface HypnosisterTests : XCTestCase
 
@@ -29,6 +30,16 @@
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsThisOn
+{
+    BNRHypnosisView *newView;
+    newView = [[BNRHypnosisView alloc] init];
+    bool isOn;
+    isOn = [newView isThisOn:0];
+
+    XCTAssert(isOn, @"Not on!");
 }
 
 @end

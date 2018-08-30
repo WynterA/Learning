@@ -10,4 +10,6 @@
 
 @interface BNRHypnosisView : UIView
 
+- (bool)isThisOn:(int)number;
+
 @end
