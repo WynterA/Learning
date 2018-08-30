@@ -12,16 +12,44 @@ class ConversionViewController: UIViewController {
 
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
+    var fahrenheitValue: Measurement<UnitTemperature>? {
+        // Property observer - not triggered when the property value is changed from within an initializer
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
+
+    var celsiusValue: Measurement<UnitTemperature>? {
+        if let fahrenheitValue = fahrenheitValue {
+            return fahrenheitValue.converted(to: .celsius)
+        } else {
+            return nil
+        }
+    }
 
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, !text.isEmpty {
-            celsiusLabel.text = text
+        if let text = textField.text, let value = Double(text) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
         } else {
-            celsiusLabel.text = "???"
+            fahrenheitValue = nil
         }
     }
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        updateCelsiusLabel()
+    }
+
+    func updateCelsiusLabel() {
+        if let celsiusValue = celsiusValue {
+            celsiusLabel.text = "\(celsiusValue.value)"
+        } else {
+            celsiusLabel.text = "???"
+        }
     }
 }
