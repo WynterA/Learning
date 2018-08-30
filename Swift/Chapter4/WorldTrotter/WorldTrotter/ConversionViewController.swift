@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConversionViewController.swift
 //  WorldTrotter
 //
 //  Created by Arie Myrmo on 8/30/18.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ConversionViewController: UIViewController {
+    
 }
-
