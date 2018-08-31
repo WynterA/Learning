@@ -8,5 +8,13 @@
 
 #### III. Chapter3: WorldTrotter
 - Working with Views and View Hierarchys
+- Frames
+- Auto Layout
+
+####  IV. Chapter4: WorldTrotter (cont.)
+- Text Input
+- Delegation
+- Protocols
+
 
 
