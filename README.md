@@ -12,6 +12,7 @@
 
  - Chapter 1: Quiz 
  - Chapter 2: Playground
- - Chapter 3: WorldTrotter
+ - Chapters 3,4,5: WorldTrotter
+
 
 
