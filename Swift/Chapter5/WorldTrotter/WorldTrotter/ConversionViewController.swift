@@ -10,6 +10,8 @@ import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
 
+    // MARK: Properties and Outlets
+
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     var fahrenheitValue: Measurement<UnitTemperature>? {
@@ -36,6 +38,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    // MARK: Actions
+
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
             fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
@@ -48,8 +52,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
     }
 
+    // MARK: Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("ConversionViewController loaded its view.")
 
         updateCelsiusLabel()
     }
