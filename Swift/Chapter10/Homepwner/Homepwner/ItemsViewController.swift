@@ -9,6 +9,8 @@
 //      is respected, ItemStore could be replaced by another object that fetches Item instances differently
 //      (such as by using a web service) without any changes to ItemsViewController.
 //
+//         When a UITableView wants to know what to display, it calls methods from the
+//      set of methods declared in the UITableViewDataSource protocol.
 //
 //  Created by Arie Myrmo on 10/4/18.
 //  Copyright © 2018 WynterVate. All rights reserved.
@@ -28,5 +30,28 @@ class ItemsViewController: UITableViewController {
     //      2. Abstractions should not depend on details. Details should depend on abstractions.
     var itemStore: ItemStore!
 
-    
+    //  The required method tableView(_:numberOfRowsInSection:) returns an integer value for the number
+    // of rows that the UITableView should display. In the table view for Homepwner, there should be a
+    // row for each entry in the store.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return itemStore.allItems.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        // Create an instance of UITableViewCell, with default appearance
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+
+        // Set the text on the cell with the description of the item
+        // that is at the nth index of items, where n = row this cell
+        // will appear in on the tableview
+        let item = itemStore.allItems[indexPath.row]
+
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+
+        return cell
+    }
+
 }
