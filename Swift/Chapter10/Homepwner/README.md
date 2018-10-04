@@ -1,4 +1,4 @@
-#  Chapter: 10 UITableView and UITableViewController Notes
+#  Chapter 10 Notes
 
 A UITableView is a view object. Recall that in the MVC design pattern, which iOS developers do their best to follow, each class falls into exactly one of the following categories:
 - model: holds data and knows nothing about the UI
