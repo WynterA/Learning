@@ -1,9 +1,9 @@
 #  Chapter 10 Notes
 
 A UITableView is a view object. Recall that in the MVC design pattern, which iOS developers do their best to follow, each class falls into exactly one of the following categories:
-- model: holds data and knows nothing about the UI
-- view: is visible to the user and knows nothing about the model objects
-- controller: keeps the UI and the model objects in sync and controls the flow of the application
+- **model**: holds data and knows nothing about the UI
+- **view**: is visible to the user and knows nothing about the model objects
+- **controller**: keeps the UI and the model objects in sync and controls the flow of the application
 
 As a view object, a UITableView does not handle application logic or data. When using a UITableView, you must
 consider what else is necessary to get the table working in your application:
@@ -18,7 +18,7 @@ When a UITableViewController creates its view, the dataSource and delegate prope
 Why didn’t the ItemsViewController instance itself just create an instance of the store? The reason for this approach is
 based on a fairly complex topic called the dependency inversion principle. The essential goal of this principle is to decouple objects in an application by inverting certain dependencies between them. This results in more robust and maintainable code.
 
-The dependency inversion principle states that:
+The **dependency inversion principle** states that:
 1. High-level objects should not depend on low-level objects. Both should depend on abstractions. 
 2. Abstractions should not depend on details. Details should depend on abstractions.
 
