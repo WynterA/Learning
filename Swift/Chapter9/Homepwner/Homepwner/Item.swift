@@ -46,4 +46,5 @@ class Item: NSObject {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }
     }
+
 }

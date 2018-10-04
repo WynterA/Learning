@@ -2,6 +2,8 @@
 //  AppDelegate.swift
 //  Homepwner
 //
+//      Is responsible for handling the changes in state that the application goes through.
+//
 //  Created by Arie Myrmo on 10/4/18.
 //  Copyright © 2018 WynterVate. All rights reserved.
 //
@@ -16,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Create an ItemStore
+        let itemStore = ItemStore()
+
+        // Access the ItemsViewController and set its item store
+        let itemsController = window!.rootViewController as! ItemsViewController
+        itemsController.itemStore = itemStore
         return true
     }
 
