@@ -30,6 +30,17 @@ class ItemsViewController: UITableViewController {
     //      2. Abstractions should not depend on details. Details should depend on abstractions.
     var itemStore: ItemStore!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Get the height of the status bar
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+    }
+
     //  The required method tableView(_:numberOfRowsInSection:) returns an integer value for the number
     // of rows that the UITableView should display. In the table view for Homepwner, there should be a
     // row for each entry in the store.

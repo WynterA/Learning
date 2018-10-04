@@ -55,3 +55,13 @@ There is one problem to be aware of: Sometimes a `UITableView` has different typ
 Note that you do not care about getting any specific cell out of the pool because you are going to change the cell content anyway. What you need is a cell of a specific type. The good news is that every cell has a reuseIdentifier property of type String. When a data source asks the table view for a reusable cell, it passes a string and says, “I need a cell with this reuse identifier.” By convention, the reuse identifier is typically the name of the cell class.
 
 To reuse cells, you need to register either a prototype cell or a class with the table view for a specific reuse identifier. You are going to register the default `UITableViewCell` class. You tell the table view, “Hey, any time I ask for a cell with this reuse identifier, give me back a cell that is this specific class.” The table view will either give you a cell from the reuse pool or instantiate a new cell if there are no cells of that type in the reuse pool.
+
+
+### Content Insets
+
+The interfaces for the applications you create fill up the entire window of the device. The status bar, if visible, is placed on top of the interface, so your interfaces must account for the placement of the status bar. 
+To have the table view cells not underlap the status bar, you will add some padding to the top of the table view. A `UITableView` is a subclass of `UIScrollView`, from which it inherits the contentInset property. You can think of the content inset as padding for all four sides of the scroll view.
+
+The top of the table view is given a content inset equal to the height of the status bar. This will make the content appear below the status bar when the table view is scrolled to the top. The scroll indicators will also underlap the status bar, so you give them the same insets to have them appear just below the status bar.
+
+Notice that you access the tableView property on the `ItemsViewController` to get at the table view. This property is inherited from `UITableViewController` and returns the controller’s table view. While you can get the same object by accessing the view of a `UITableViewController`, using tableView tells the compiler that the returned object will be an instance of `UITableView`. Thus, calling a method or accessing a property that is specific to `UITableView` will not generate an error.
