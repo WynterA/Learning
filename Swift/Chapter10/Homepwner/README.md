@@ -6,7 +6,7 @@ A UITableView is a view object. Recall that in the MVC design pattern, which iOS
 - **controller**: keeps the UI and the model objects in sync and controls the flow of the application
 
 
-#### TableViews and Controller
+### TableViews and Controller
 
 As a view object, a `UITableView` does not handle application logic or data. When using a `UITableView`, you must
 consider what else is necessary to get the table working in your application:
@@ -19,7 +19,7 @@ An instance of the class `UITableViewController` can fill all three roles: view 
 When a `UITableViewController` creates its view, the dataSource and delegate properties of the `UITableView` are automatically set to point at the `UITableViewController`
 
 
-#### Dependency Inversion Principle
+### Dependency Inversion Principle
 
 Why didn’t the `ItemsViewController` instance itself just create an instance of the store? The reason for this approach is
 based on a fairly complex topic called the dependency inversion principle. The essential goal of this principle is to decouple objects in an application by inverting certain dependencies between them. This results in more robust and maintainable code.
@@ -34,7 +34,7 @@ A common pattern used when implementing the dependency inversion principle is de
 
 For `ItemsViewController` to conform to `UITableViewDataSource`, it must implement `tableView(_:numberOfRowsInSection:) and tableView(_:cellForRowAt:)`. These methods tell the table view how many rows it should display and what content to display in each row.
 
-#### Sections and Cells
+### Sections and Cells
 
 Table views can be broken up into sections, with each section having its own set of rows. For example, in the address book, all names beginning with “C” are grouped together in a section. By default, a table view has one section, and in this chapter you will work with only one. Once you understand how a table view works, it is not hard to use multiple sections.
 
@@ -43,6 +43,15 @@ A cell itself has one subview – its contentView (Figure 10.8). The contentView
 
 The real meat of a `UITableViewCell` is the contentView, which has three subviews of its own (Figure 10.9).
 Two of those subviews are `UILabel` instances that are properties of `UITableViewCell` named textLabel and detailTextLabel. The third subview is a `UIImageView` called imageView. In this chapter, you will use textLabel and detailTextLabel.
+
 Each cell also has a `UITableViewCellStyle` that determines which subviews are used and their position within the contentView. Examples of these styles and their constants are shown in Figure 10.10.
 How do you decide which cell an Item corresponds to? One of the parameters sent to `tableView(_:cellForRowAt:)` is an IndexPath, which has two properties: section and row. When this method is called on a data source, the table view is asking, “Can I have a cell to display in section X, row Y?” Because there is only one section in this exercise, your implementation will only be concerned with the index path’s row.
 
+#### Reusing UITableViewCells
+
+To conserve memory and improve performance, you can reuse table view cells. When the user scrolls the table, some cells move offscreen. Offscreen cells are put into a pool of cells available for reuse. Then, instead of creating a brand new cell for every request, the data source first checks the pool. If there is an unused cell, the data source configures it with new data and returns it to the table view.
+
+There is one problem to be aware of: Sometimes a `UITableView` has different types of cells. Occasionally, you subclass `UITableViewCell` to create a special look or behavior. However, different subclasses floating around the pool of reusable cells create the possibility of getting back a cell of the wrong type. You must be sure of the type of the cell returned so that you can be sure of what properties and methods it has.
+Note that you do not care about getting any specific cell out of the pool because you are going to change the cell content anyway. What you need is a cell of a specific type. The good news is that every cell has a reuseIdentifier property of type String. When a data source asks the table view for a reusable cell, it passes a string and says, “I need a cell with this reuse identifier.” By convention, the reuse identifier is typically the name of the cell class.
+
+To reuse cells, you need to register either a prototype cell or a class with the table view for a specific reuse identifier. You are going to register the default `UITableViewCell` class. You tell the table view, “Hey, any time I ask for a cell with this reuse identifier, give me back a cell that is this specific class.” The table view will either give you a cell from the reuse pool or instantiate a new cell if there are no cells of that type in the reuse pool.

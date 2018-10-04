@@ -40,8 +40,12 @@ class ItemsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // Create an instance of UITableViewCell, with default appearance
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        //  The method dequeueReusableCell(withIdentifier:for:) will check the pool, or queue, of cells to see
+        // whether a cell with the correct reuse identifier already exists. If so, it will “dequeue” that cell.
+        // If there is not an existing cell, a new cell will be created and returned.
+
+        // Get a new or recycled cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
