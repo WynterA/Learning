@@ -15,6 +15,9 @@
 //         - This is also OK; the result is not assigned to a variable
 //          itemStore.createItem()
 //
+//      A store is a lower-level object that retrieves and saves Item instances
+//      through details that are only known to that class.
+//
 //  Created by Arie Myrmo on 10/4/18.
 //  Copyright © 2018 WynterVate. All rights reserved.
 //

@@ -2,6 +2,14 @@
 //  ItemsViewController.swift
 //  Homepwner
 //
+//          ItemsViewController is a higher-level object that only knows that it will be provided with a
+//      utility object (the store) from which it can obtain a list of Item instances and to which it
+//      can pass new or updated Item instances to be stored persistently. This results in a decoupling
+//      because ItemsViewController is not dependent on ItemStore. In fact, as long as the store abstraction
+//      is respected, ItemStore could be replaced by another object that fetches Item instances differently
+//      (such as by using a web service) without any changes to ItemsViewController.
+//
+//
 //  Created by Arie Myrmo on 10/4/18.
 //  Copyright © 2018 WynterVate. All rights reserved.
 //

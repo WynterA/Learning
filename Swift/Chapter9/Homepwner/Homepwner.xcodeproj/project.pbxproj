@@ -51,6 +51,7 @@
 		B53AFD4C2166609700D21D7D /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		B53AFD4E2166626F00D21D7D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B53AFD50216679F800D21D7D /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		B53AFD52216683A400D21D7D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		B53AFD12216658DD00D21D7D = {
 			isa = PBXGroup;
 			children = (
+				B53AFD52216683A400D21D7D /* README.md */,
 				B53AFD1D216658DD00D21D7D /* Homepwner */,
 				B53AFD32216658DF00D21D7D /* HomepwnerTests */,
 				B53AFD3D216658DF00D21D7D /* HomepwnerUITests */,
