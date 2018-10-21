@@ -30,6 +30,14 @@ class ItemsViewController: UITableViewController {
     //      2. Abstractions should not depend on details. Details should depend on abstractions.
     var itemStore: ItemStore!
 
+    @IBAction func addNewItem(_ sender: UIButton) {
+
+    }
+
+    @IBAction func toggleEditingMode(_ sender: UIButton) {
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
