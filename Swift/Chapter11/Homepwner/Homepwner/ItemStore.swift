@@ -28,6 +28,7 @@ class ItemStore {
 
     var allItems = [Item]()
 
+    // optional now that we have the functionality to add our own items to the store
     // designated initialzer - adds five random items
     init() {
         for _ in 0..<5 {
