@@ -14,6 +14,7 @@
  - Chapter 2: Playground
  - Chapters 3, 4, and 5: WorldTrotter
  
+ - Chapters 10, 11: Homepwner
 
 
 

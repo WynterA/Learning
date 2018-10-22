@@ -21,10 +21,17 @@
 - UITabBarController
 - Subviews: Loading and Appearing Views
 
-#### IX. Chapter10: Homepwner
+####  X. Chapter10: Homepwner
 - UITableView and UITableViewController
 - TableViewCells & Reusage
 - Content Insets
+
+#### XI. Chapter11: Homepwner (Cont.)
+- UITableView
+- Row Manipulation
+- User Alerts
+- Design Patterns
+
 
 
 
