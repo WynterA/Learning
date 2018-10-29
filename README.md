@@ -1,5 +1,7 @@
 # Learning-Projects
 
+This repository contains projects from two Big Nerd Ranch iOS Development books. 
+
 ### Objective-C BNR Book Projects
 
  - Chapter 1: Quiz
