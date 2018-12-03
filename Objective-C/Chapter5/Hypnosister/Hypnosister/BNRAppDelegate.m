@@ -24,6 +24,10 @@
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    // TODO: @WynterA: Setup root view controller - necessary ..
+    //[self.window setRootViewController:viewController];
+    
     return YES;
 }
 
