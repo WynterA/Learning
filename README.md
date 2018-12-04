@@ -8,6 +8,7 @@ This repository contains projects from two Big Nerd Ranch iOS Development books.
  - Chapter 2: RandomPossesions
  - Chapter 3: RandomPossesions
  - Chapter 4: Hypnosister
+ - Chapter 5: Hypnosister
  
 
 ### Swift BNR Book Projects

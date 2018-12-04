@@ -24,6 +24,8 @@
 	- Views and View Hierarchy
 
 ####  V. Hypnosister - Chapter 5
-	- ?
+- Topics Covered:
+	- UIScrollingView
+	- Screen-sized views
 
 
