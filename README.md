@@ -1,22 +1,10 @@
 # Learning-Projects
 
-This repository contains projects from two Big Nerd Ranch iOS Development books. 
-
-### Objective-C BNR Book Projects
-
- - Chapter 1: Quiz
- - Chapter 2: RandomPossesions
- - Chapter 3: RandomPossesions
- - Chapter 4: Hypnosister
- - Chapter 5: Hypnosister
- 
-
-### Swift BNR Book Projects
-
- - Chapter 1: Quiz 
- - Chapter 2: Playground
- - Chapters 3, 4, and 5: WorldTrotter
- - Chapters 10, 11: Homepwner
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
+**Projects are split between several sources:**
+ - Big Nerd Ranch (Books and Articles)
+ - Ray Wenderlich (Tutorials)
+ - Other
